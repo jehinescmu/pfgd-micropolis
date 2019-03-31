@@ -34,6 +34,7 @@ public enum MicropolisMessage
 	FIRE_NEED_FUNDING,     //  18            doMessages
 	POLICE_NEED_FUNDING,   //  19            doMessages
 	FIRE_REPORT,           //  20
+	PROTEST_REPORT, 
 	MONSTER_REPORT,
 	TORNADO_REPORT,
 	EARTHQUAKE_REPORT,     //  23            makeEarthquake
@@ -58,6 +59,7 @@ public enum MicropolisMessage
 	FLOOD_REPORT,
 	MELTDOWN_REPORT,        // 43            doMeltdown
 	RIOTING_REPORT,
+	
 
 	// added by Jason
 	NO_NUCLEAR_PLANTS;
@@ -79,6 +81,7 @@ public enum MicropolisMessage
 	// location-specific
 	FLOOD_REPORT.useNotificationPane = true;
 	FIRE_REPORT.useNotificationPane = true;
+	PROTEST_REPORT.useNotificationPane = true;
 	TORNADO_REPORT.useNotificationPane = true;
 	MELTDOWN_REPORT.useNotificationPane = true;
 	EARTHQUAKE_REPORT.useNotificationPane = true;

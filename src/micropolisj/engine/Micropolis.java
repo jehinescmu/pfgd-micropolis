@@ -901,6 +901,8 @@ public class Micropolis
 			setFire();
 			break;
 		case 2:
+			startProtest();
+			break;
 		case 3:
 			makeFlood();
 			break;
@@ -1450,6 +1452,7 @@ public class Micropolis
 		bb = new HashMap<String,TileBehavior>();
 
 		bb.put("FIRE", new TerrainBehavior(this, TerrainBehavior.B.FIRE));
+		bb.put("PROTEST", new TerrainBehavior(this, TerrainBehavior.B.PROTEST));
 		bb.put("FLOOD", new TerrainBehavior(this, TerrainBehavior.B.FLOOD));
 		bb.put("RADIOACTIVE", new TerrainBehavior(this, TerrainBehavior.B.RADIOACTIVE));
 		bb.put("ROAD", new TerrainBehavior(this, TerrainBehavior.B.ROAD));
@@ -2255,6 +2258,19 @@ public class Micropolis
 					setTile(x, y, (char)(FIRE + PRNG.nextInt(8)));
 				}
 			}
+		}
+	}
+	
+	public void startProtest()
+	{
+		int x = PRNG.nextInt(getWidth());
+		int y = PRNG.nextInt(getHeight());
+		int t = getTile(x, y);
+
+		if (isArsonable(t)) {
+			setTile(x, y, (char)(FIRE + PRNG.nextInt(8)));
+			crashLocation = new CityLocation(x, y);
+			sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 		}
 	}
 

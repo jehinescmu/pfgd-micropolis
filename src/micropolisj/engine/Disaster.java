@@ -15,6 +15,7 @@ public enum Disaster
 {
 	MONSTER,
 	FIRE,
+	PROTEST,
 	FLOOD,
 	MELTDOWN,
 	TORNADO,

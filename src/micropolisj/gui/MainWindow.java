@@ -611,6 +611,25 @@ public class MainWindow extends JFrame
 			}
 			}));
 		disastersMenu.add(menuItem);
+		
+		
+		menuItem = new JMenuItem(strings.getString("menu.disasters.PROTEST"));
+		setupKeys(menuItem, "menu.disasters.PROTEST");
+		menuItem.addActionListener(wrapActionListener(
+			new ActionListener() {
+			public void actionPerformed(ActionEvent ev)
+			{
+				onInvokeDisasterClicked(Disaster.PROTEST);
+			}
+			}));
+		disastersMenu.add(menuItem);
+		
+		
+		
+		
+		
+		
+		
 
 		menuItem = new JMenuItem(strings.getString("menu.disasters.FLOOD"));
 		setupKeys(menuItem, "menu.disasters.FLOOD");
@@ -1524,6 +1543,9 @@ public class MainWindow extends JFrame
 		switch (disaster) {
 		case FIRE:
 			getEngine().makeFire();
+			break;
+		case PROTEST:
+			getEngine().startProtest();
 			break;
 		case FLOOD:
 			getEngine().makeFlood();
