@@ -1545,7 +1545,7 @@ public class MainWindow extends JFrame
 			getEngine().makeFire();
 			break;
 		case PROTEST:
-			getEngine().startProtest();
+			getEngine().makeProtest();
 			break;
 		case FLOOD:
 			getEngine().makeFlood();

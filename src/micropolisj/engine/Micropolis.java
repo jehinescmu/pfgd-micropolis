@@ -2273,6 +2273,26 @@ public class Micropolis
 			sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 		}
 	}
+	
+	
+	public void makeProtest()
+	{
+		// forty attempts at finding place to start protest
+		for (int t = 0; t < 40; t++)
+		{
+			int x = PRNG.nextInt(getWidth());
+			int y = PRNG.nextInt(getHeight());
+			int tile = getTile(x, y);
+			if (!isZoneCenter(tile) && isCombustible(tile))
+			{
+				if (tile > 21 && tile < LASTZONE) {
+					setTile(x, y, (char)(FIRE + PRNG.nextInt(8)));
+					sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
+					return;
+				}
+			}
+		}
+	}
 
 	void setFire()
 	{
