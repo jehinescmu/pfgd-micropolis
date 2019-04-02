@@ -2259,6 +2259,7 @@ public class Micropolis
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	public void startProtest()
 	{
@@ -2292,6 +2293,8 @@ public class Micropolis
 			}
 		}
 	}
+=======
+>>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
 =======
 >>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
 =======
