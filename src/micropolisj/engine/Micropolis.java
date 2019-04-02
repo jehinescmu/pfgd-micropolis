@@ -902,6 +902,7 @@ public class Micropolis
 			break;
 		case 2:
 			startProtest();
+			makeProtest();
 			break;
 		case 3:
 			makeFlood();
@@ -2271,6 +2272,25 @@ public class Micropolis
 			setTile(x, y, (char)(FIRE + PRNG.nextInt(8)));
 			crashLocation = new CityLocation(x, y);
 			sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
+		}
+	}
+	
+	public void makeProtest()
+	{
+		// forty attempts at finding place to start fire
+		for (int t = 0; t < 40; t++)
+		{
+			int x = PRNG.nextInt(getWidth());
+			int y = PRNG.nextInt(getHeight());
+			int tile = getTile(x, y);
+			if (!isZoneCenter(tile) && isCombustible(tile))
+			{
+				if (tile > 21 && tile < LASTZONE) {
+					setTile(x, y, (char)(FIRE + PRNG.nextInt(8)));
+					sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
+					return;
+				}
+			}
 		}
 	}
 
