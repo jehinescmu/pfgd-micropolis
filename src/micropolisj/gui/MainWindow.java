@@ -1526,9 +1526,12 @@ public class MainWindow extends JFrame
 			getEngine().makeFire();
 			break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		case PROTEST:
 			getEngine().makeProtest();
 			break;
+=======
+>>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
 =======
 >>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
 		case FLOOD:
