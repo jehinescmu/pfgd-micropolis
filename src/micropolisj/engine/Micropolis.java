@@ -901,6 +901,8 @@ public class Micropolis
 			setFire();
 			break;
 		case 2:
+			startProtest();
+			break;
 		case 3:
 			makeFlood();
 			break;
@@ -1450,6 +1452,7 @@ public class Micropolis
 		bb = new HashMap<String,TileBehavior>();
 
 		bb.put("FIRE", new TerrainBehavior(this, TerrainBehavior.B.FIRE));
+		bb.put("PROTEST", new TerrainBehavior(this, TerrainBehavior.B.PROTEST));
 		bb.put("FLOOD", new TerrainBehavior(this, TerrainBehavior.B.FLOOD));
 		bb.put("RADIOACTIVE", new TerrainBehavior(this, TerrainBehavior.B.RADIOACTIVE));
 		bb.put("ROAD", new TerrainBehavior(this, TerrainBehavior.B.ROAD));
@@ -2257,9 +2260,6 @@ public class Micropolis
 			}
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	
 	public void startProtest()
 	{
@@ -2273,32 +2273,6 @@ public class Micropolis
 			sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 		}
 	}
-	
-	
-	public void makeProtest()
-	{
-		// forty attempts at finding place to start protest
-		for (int t = 0; t < 40; t++)
-		{
-			int x = PRNG.nextInt(getWidth());
-			int y = PRNG.nextInt(getHeight());
-			int tile = getTile(x, y);
-			if (!isZoneCenter(tile) && isCombustible(tile))
-			{
-				if (tile > 21 && tile < LASTZONE) {
-					setTile(x, y, (char)(FIRE + PRNG.nextInt(8)));
-					sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
-					return;
-				}
-			}
-		}
-	}
-=======
->>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
-=======
->>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
-=======
->>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
 
 	void setFire()
 	{
