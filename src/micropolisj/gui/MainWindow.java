@@ -611,25 +611,6 @@ public class MainWindow extends JFrame
 			}
 			}));
 		disastersMenu.add(menuItem);
-		
-		
-		menuItem = new JMenuItem(strings.getString("menu.disasters.PROTEST"));
-		setupKeys(menuItem, "menu.disasters.PROTEST");
-		menuItem.addActionListener(wrapActionListener(
-			new ActionListener() {
-			public void actionPerformed(ActionEvent ev)
-			{
-				onInvokeDisasterClicked(Disaster.PROTEST);
-			}
-			}));
-		disastersMenu.add(menuItem);
-		
-		
-		
-		
-		
-		
-		
 
 		menuItem = new JMenuItem(strings.getString("menu.disasters.FLOOD"));
 		setupKeys(menuItem, "menu.disasters.FLOOD");
@@ -1544,9 +1525,12 @@ public class MainWindow extends JFrame
 		case FIRE:
 			getEngine().makeFire();
 			break;
+<<<<<<< HEAD
 		case PROTEST:
 			getEngine().makeProtest();
 			break;
+=======
+>>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
 		case FLOOD:
 			getEngine().makeFlood();
 			break;

@@ -901,8 +901,6 @@ public class Micropolis
 			setFire();
 			break;
 		case 2:
-			startProtest();
-			break;
 		case 3:
 			makeFlood();
 			break;
@@ -1452,7 +1450,6 @@ public class Micropolis
 		bb = new HashMap<String,TileBehavior>();
 
 		bb.put("FIRE", new TerrainBehavior(this, TerrainBehavior.B.FIRE));
-		bb.put("PROTEST", new TerrainBehavior(this, TerrainBehavior.B.PROTEST));
 		bb.put("FLOOD", new TerrainBehavior(this, TerrainBehavior.B.FLOOD));
 		bb.put("RADIOACTIVE", new TerrainBehavior(this, TerrainBehavior.B.RADIOACTIVE));
 		bb.put("ROAD", new TerrainBehavior(this, TerrainBehavior.B.ROAD));
@@ -2260,6 +2257,7 @@ public class Micropolis
 			}
 		}
 	}
+<<<<<<< HEAD
 	
 	public void startProtest()
 	{
@@ -2293,6 +2291,8 @@ public class Micropolis
 			}
 		}
 	}
+=======
+>>>>>>> parent of 8369c19... Creating Protest from Fire Disaster
 
 	void setFire()
 	{
