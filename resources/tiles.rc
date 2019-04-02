@@ -1010,4 +1010,4 @@
 958   misc_animation@0,2096
 959   misc_animation@0,2112
 # BEGIN PROTEST ANIMATION #
-960    terrain@0,1024                  (noburn)(description=#6)(behavior=FIRE)(becomes=56)(pollution=90)
+960   protest_sprite@0,0                  (noburn)(description=#6)(behavior=FIRE)(becomes=56)(pollution=90)
