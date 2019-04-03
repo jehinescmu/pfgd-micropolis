@@ -2269,7 +2269,7 @@ public class Micropolis
 		int t = getTile(x, y);
 
 		if (isArsonable(t)) {
-			setTile(x, y, (char)(PROTEST + PRNG.nextInt(8)));
+			setTile(x, y, (char)(PROTEST));
 			crashLocation = new CityLocation(x, y);
 			sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 		}
@@ -2286,7 +2286,7 @@ public class Micropolis
 			if (!isZoneCenter(tile) && isCombustible(tile))
 			{
 				if (tile > 21 && tile < LASTZONE) {
-					setTile(x, y, (char)(FIRE + PRNG.nextInt(8)));
+					setTile(x, y, (char)(PROTEST));
 					sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 					return;
 				}
