@@ -1011,9 +1011,13 @@
 959   misc_animation@0,2112
 # BEGIN PROTEST ANIMATION #
 <<<<<<< HEAD
+<<<<<<< HEAD
 960   protest_sprite_full@0,0                  (noburn)(description=#6)(behavior=PROTEST)(becomes=961)(pollution=90)
 961	  protest_sprite_full@0,16                 (noburn)(description=#6)(behavior=PROTEST)(becomes=962)(pollution=90)
 962	  protest_sprite_full@0,32                 (noburn)(description=#6)(behavior=PROTEST)(becomes=960)(pollution=90)
+=======
+960   protest_sprite@0,0                  (noburn)(description=#6)(behavior=FIRE)(becomes=56)(pollution=90)
+>>>>>>> parent of 71b4f10... Working Protest
 =======
 960   protest_sprite@0,0                  (noburn)(description=#6)(behavior=FIRE)(becomes=56)(pollution=90)
 >>>>>>> parent of 71b4f10... Working Protest
