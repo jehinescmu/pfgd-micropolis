@@ -901,8 +901,11 @@ public class Micropolis
 			setFire();
 			break;
 		case 2:
-			startProtest();
-			makeProtest();
+			if (evaluation.cityScore < 	100 ) {
+				startProtest();
+				makeProtest();
+			}
+			
 			break;
 		case 3:
 			makeFlood();
@@ -2277,8 +2280,8 @@ public class Micropolis
 	
 	public void makeProtest()
 	{
-		// forty attempts at finding place to start fire
-		for (int t = 0; t < 400; t++)
+		// one hundred attempts at finding place to start fire
+		for (int t = 0; t < 100; t++)
 		{
 			int x = PRNG.nextInt(getWidth());
 			int y = PRNG.nextInt(getHeight());
