@@ -151,7 +151,7 @@ public class TileConstants
 	static final char VBRDG2 = 950;
 	static final char VBRDG3 = 951;
 	static final char PROTEST = 960;
-	public static final char LAST_TILE = 962;
+	public static final char LAST_TILE = 961;
 
 	static final char [] RoadTable = new char[] {
 		ROADS, ROADS2, ROADS, ROADS3,
@@ -273,6 +273,10 @@ public class TileConstants
 			tile <= LASTZONE
 			);
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 3642171... Animated Sprite
 	//used by Sprite::destroyTile
 	public static boolean isBridge(int tile)
 	{
