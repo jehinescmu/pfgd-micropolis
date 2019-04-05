@@ -2269,7 +2269,7 @@ public class Micropolis
 		int t = getTile(x, y);
 
 		if (isArsonable(t)) {
-			setTile(x, y, (char)(PROTEST + PRNG.nextInt(8)));
+			setTile(x, y, (char)(PROTEST));
 			crashLocation = new CityLocation(x, y);
 			sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 		}
@@ -2278,15 +2278,15 @@ public class Micropolis
 	public void makeProtest()
 	{
 		// forty attempts at finding place to start fire
-		for (int t = 0; t < 40; t++)
+		for (int t = 0; t < 400; t++)
 		{
 			int x = PRNG.nextInt(getWidth());
 			int y = PRNG.nextInt(getHeight());
 			int tile = getTile(x, y);
-			if (!isZoneCenter(tile) && isCombustible(tile))
+			if (isRoadAny(tile))
 			{
 				if (tile > 21 && tile < LASTZONE) {
-					setTile(x, y, (char)(PROTEST + PRNG.nextInt(8)));
+					setTile(x, y, (char)(PROTEST));
 					sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 					return;
 				}
