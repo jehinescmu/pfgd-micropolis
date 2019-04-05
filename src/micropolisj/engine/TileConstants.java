@@ -273,9 +273,6 @@ public class TileConstants
 			tile <= LASTZONE
 			);
 	}
-	960   protest_sprite_full@0,0                  (noburn)(description=#6)(behavior=PROTEST)(becomes=961)(pollution=90)
-	961	  protest_sprite_full@0,16                 (noburn)(description=#6)(behavior=PROTEST)(becomes=962)(pollution=90)
-	962	  protest_sprite_full@0,16                 (noburn)(description=#6)(behavior=PROTEST)(becomes=960)(pollution=90)
 	//used by Sprite::destroyTile
 	public static boolean isBridge(int tile)
 	{
