@@ -901,7 +901,7 @@ public class Micropolis
 			setFire();
 			break;
 		case 2:
-			if (evaluation.cityScore < 	100 ) {
+			if (evaluation.cityScore < 	500 ) {
 				startProtest();
 				makeProtest();
 			}
@@ -2271,10 +2271,12 @@ public class Micropolis
 		int y = PRNG.nextInt(getHeight());
 		int t = getTile(x, y);
 
-		if (isArsonable(t)) {
-			setTile(x, y, (char)(PROTEST));
-			crashLocation = new CityLocation(x, y);
-			sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
+		if (isRoadAny(t)) {
+			if (t > 21 && t < 239) {
+				setTile(x, y, (char)(PROTEST));
+				crashLocation = new CityLocation(x, y);
+				sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
+			}
 		}
 	}
 	
@@ -2288,7 +2290,8 @@ public class Micropolis
 			int tile = getTile(x, y);
 			if (isRoadAny(tile))
 			{
-				if (tile > 21 && tile < LASTZONE) {
+				
+				if (tile > 21 && tile < 239) {
 					setTile(x, y, (char)(PROTEST));
 					sendMessageAt(MicropolisMessage.PROTEST_REPORT, x, y);
 					return;

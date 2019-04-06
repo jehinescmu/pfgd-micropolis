@@ -138,7 +138,10 @@ class TerrainBehavior extends TileBehavior
 							city.makeExplosion(xtem, ytem);
 						}
 					}
+					if (isRoadAny(c)) 
+					{
 					city.setTile(xtem, ytem, (char)(PROTEST + PRNG.nextInt(4)));
+					}
 				}
 			}
 		}
