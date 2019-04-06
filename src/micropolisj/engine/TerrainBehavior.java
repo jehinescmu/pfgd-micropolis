@@ -117,6 +117,11 @@ class TerrainBehavior extends TileBehavior
 		if (PRNG.nextInt(4) != 0) {
 			return;
 		}
+		// one in ten times set a fire
+		if (PRNG.nextInt(5) == 3) {
+			doFire();
+			return;
+		}
 
 		final int [] DX = { 0, 1, 0, -1 };
 		final int [] DY = { -1, 0, 1, 0 };
